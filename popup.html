@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<label class="switch">
+  <input type="checkbox" id="checkbox">
+  <span class="slider"></span>
+</label>
+<button id="vk-button" class="vk-button">Авторизоваться
+  <div class="top_home_logo"><img src="icons/vk_icon.svg" alt="VK"></div>
+</button>
+<style>
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  width: 54px;
+  height: 26px;
+  margin: 10px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 60px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 60px;
+}
+
+.slider.animation, .slider.animation:before {
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2ecc71;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2ecc71;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+.vk-button {
+  width: 100%;
+  /* color: #fff; */
+  /* height: 30px; */
+   background-color: #688BAE;
+  border: 1px solid #688BAE;
+  color: #ffff;
+  /* border-radius: 30px; */
+  font-size: 13px;
+  outline: none;
+  cursor: pointer;
+}
+.top_home_logo img {
+  width: 25px;
+  margin-top: 5px;
+}
+.slider.round:before {
+  border-radius: 50%;
+}
+</style>
+<script src="popup.js"></script>
+</body>
+</html>
